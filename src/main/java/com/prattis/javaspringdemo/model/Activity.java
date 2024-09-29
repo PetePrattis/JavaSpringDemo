@@ -15,6 +15,12 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "ACTIVITIES")
 public class Activity extends BaseModel {
+
+    /*
+	foreign keys
+	only exist so that relations with the other tables to be created
+	these ARE columns in this table
+	*/
 	private long authorId;
 	
 	private long contentId;

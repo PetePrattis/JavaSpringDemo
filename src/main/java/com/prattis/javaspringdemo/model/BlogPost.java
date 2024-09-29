@@ -26,7 +26,7 @@ public class BlogPost extends Content {
 
 	@ToString.Exclude
 	@EqualsAndHashCode.Exclude
-	@OneToMany(orphanRemoval = true)
-	@JoinColumn(name = "BLOGPOST_ID")
+	@OneToMany(orphanRemoval = true) //if a comment is removed then its id is also removed from java
+	@JoinColumn(name = "BLOGPOST_ID") //the id is used as foreign key in Comments table
 	private Set<Comment> comments = new HashSet<>();
 }

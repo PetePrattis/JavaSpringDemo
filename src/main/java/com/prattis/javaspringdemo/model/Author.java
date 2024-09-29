@@ -16,9 +16,9 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @SuperBuilder
-@Entity
-@Table(name = "AUTHORS")
-public class Author extends BaseModel{
+@Entity //table in Database
+@Table(name = "AUTHORS") //table's name, usually plural nouns
+public class Author extends BaseModel{ //extends so that id is inherited
 	@Column(length = 20, nullable = false)
 	private String firstname;
 	
@@ -27,10 +27,16 @@ public class Author extends BaseModel{
 	
 	@Column(length = 50, nullable = false)
 	private String email;
-	
-	@ToString.Exclude
+
+	//foreign key from class (table) Activity (ies)
+	@ToString.Exclude //Lombok annotation excluding
 	@EqualsAndHashCode.Exclude
-	@OneToMany(mappedBy = "authorId")
+	@OneToMany(mappedBy = "authorId") //authorId from Activity class
 	private Set<Activity> activities = new HashSet<>();
+	/*
+    extends collections
+	accepts only unique records
+	every author has many
+	*/
 }
 
