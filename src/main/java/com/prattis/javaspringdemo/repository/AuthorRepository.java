@@ -13,6 +13,7 @@ Repository connects/ communicates with Database through CRUD operations
 Create, Read, Update, Delete stands for CRUD for the data
 Spring Data adds an access layer
 Extends JPARepository regards the Spring Data and enables CRUD operations
+Repository is of type Interface
 */
 @Repository //mandatory annotation
 public interface AuthorRepository extends JpaRepository<Author, Long> { //second parameter is the primary key of the corresponding table
