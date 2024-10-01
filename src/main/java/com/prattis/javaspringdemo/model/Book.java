@@ -28,6 +28,6 @@ public class Book extends Content {
 	@Column(nullable = true)
 	private Integer pages;
 	
-	@Column(precision = 10, scale = 2, nullable = false)
+	@Column(precision = 10, scale = 2, nullable = false) //ten digits in total, two decimals
 	private BigDecimal cost;
 }

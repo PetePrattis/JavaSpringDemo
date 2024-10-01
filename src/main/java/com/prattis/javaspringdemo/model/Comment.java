@@ -16,7 +16,7 @@ public class Comment extends BaseModel {
 	@Column(length = 4096, nullable = false)
 	private String body;
 	
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.TIMESTAMP) //includes date & time
 	@Column(nullable = false)
 	private Date publishDate;
 }
